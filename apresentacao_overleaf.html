@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Monitoramento de Tráfego com Python</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24pt;
+            margin-bottom: 30px;
+            color: #000;
+        }
+        h2 {
+            font-size: 18pt;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #000;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-size: 14pt;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 15px;
+            font-size: 12pt;
+        }
+        ul, ol {
+            margin-bottom: 15px;
+            font-size: 12pt;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .author {
+            text-align: center;
+            font-size: 14pt;
+            margin-bottom: 10px;
+        }
+        .institution {
+            text-align: center;
+            font-size: 12pt;
+            margin-bottom: 30px;
+        }
+        .code-block {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-left: 3px solid #333;
+            padding: 10px;
+            margin: 15px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 10pt;
+            overflow-x: auto;
+        }
+        .emphasis {
+            font-weight: bold;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table th, table td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Monitoramento de Tráfego com Python</h1>
+
+    <div class="author">
+        <p><strong>Autor:</strong> João Maurício Porto</p>
+    </div>
+
+    <div class="institution">
+        <p><em>Instituição de Ensino</em></p>
+        <p><em>Data: Março de 2026</em></p>
+    </div>
+
+    <div class="section">
+        <h2>1. Resumo</h2>
+        <p>
+            Este trabalho apresenta o desenvolvimento de um sistema de monitoramento de tráfego urbano criado em Python.
+            O projeto permite registrar e analisar dados relacionados ao fluxo de veículos em diferentes locais e horários,
+            além de gerar estatísticas e relatórios que ajudam a compreender padrões de trânsito. O sistema possui uma
+            interface gráfica desenvolvida com CustomTkinter, permitindo a inserção e visualização de dados de forma
+            interativa e organizada.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>2. Introdução</h2>
+        <p>
+            O monitoramento de tráfego urbano é uma atividade essencial para o planejamento e gestão de cidades modernas.
+            A análise de dados sobre o fluxo de veículos, velocidade média e ocorrências permite identificar padrões
+            importantes que auxiliam na tomada de decisões relacionadas à mobilidade urbana.
+        </p>
+        <p>
+            Este projeto foi desenvolvido com o objetivo de simular um sistema simples de monitoramento de tráfego urbano.
+            A aplicação permite registrar leituras contendo informações como local, horário, fluxo de veículos, velocidade
+            média e possíveis ocorrências (como acidentes ou obras).
+        </p>
+        <p>
+            A partir dessas informações, o sistema realiza análises automáticas que ajudam a identificar padrões importantes
+            no trânsito, como horários de pico, média de fluxo de veículos e número de ocorrências registradas. Além disso,
+            o projeto também foi desenvolvido com foco na prática de organização de código em múltiplos módulos, separando
+            responsabilidades entre interface gráfica, lógica de negócio, estrutura de dados e funções auxiliares.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>3. Objetivos</h2>
+        <h3>3.1 Objetivo Geral</h3>
+        <p>
+            Desenvolver um sistema de monitoramento de tráfego urbano utilizando Python, capaz de registrar, armazenar
+            e analisar dados relacionados ao fluxo de veículos em diferentes locais e horários.
+        </p>
+
+        <h3>3.2 Objetivos Específicos</h3>
+        <ul>
+            <li>Implementar uma interface gráfica intuitiva para inserção e visualização de dados;</li>
+            <li>Desenvolver funcionalidades para registro de leituras de tráfego com informações relevantes;</li>
+            <li>Criar análises estatísticas para identificação de padrões de tráfego;</li>
+            <li>Organizar o código em módulos seguindo boas práticas de programação;</li>
+            <li>Gerar relatórios detalhados sobre o comportamento do tráfego urbano.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. Tecnologias Utilizadas</h2>
+        <p>As seguintes tecnologias foram utilizadas no desenvolvimento deste projeto:</p>
+
+        <table>
+            <tr>
+                <th>Tecnologia</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td><strong>Python</strong></td>
+                <td>Linguagem de programação principal utilizada no desenvolvimento da aplicação.</td>
+            </tr>
+            <tr>
+                <td><strong>CustomTkinter</strong></td>
+                <td>Biblioteca utilizada para a criação da interface gráfica moderna da aplicação.</td>
+            </tr>
+            <tr>
+                <td><strong>Tkinter</strong></td>
+                <td>Biblioteca base utilizada para construção da interface gráfica.</td>
+            </tr>
+            <tr>
+                <td><strong>Estrutura Modular</strong></td>
+                <td>Organização do projeto em diferentes arquivos para separar responsabilidades e melhorar a manutenção do código.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>5. Estrutura do Projeto</h2>
+        <p>O repositório está organizado da seguinte forma, permitindo uma separação clara entre as diferentes responsabilidades do sistema:</p>
+
+        <ul>
+            <li><span class="emphasis">gui.py:</span> Contém toda a interface gráfica da aplicação, incluindo os componentes visuais e a interação com o usuário;</li>
+            <li><span class="emphasis">main.py:</span> Versão alternativa do sistema executada via terminal, permitindo o uso sem interface gráfica;</li>
+            <li><span class="emphasis">models.py:</span> Responsável pela estrutura de armazenamento das leituras de tráfego, definindo as classes de dados;</li>
+            <li><span class="emphasis">services.py:</span> Contém as regras de negócio e funções de processamento de dados, incluindo análises estatísticas;</li>
+            <li><span class="emphasis">utils.py:</span> Funções auxiliares utilizadas para validação de dados e outras operações de suporte.</li>
+        </ul>
+
+        <p>
+            Essa organização permite uma separação clara entre as diferentes responsabilidades do sistema, facilitando
+            futuras melhorias e manutenção do código. A arquitetura modular também facilita o entendimento do código
+            e permite que diferentes desenvolvedores trabalhem em módulos distintos simultaneamente.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>6. Funcionalidades do Sistema</h2>
+        <p>O sistema permite realizar diversas operações relacionadas ao monitoramento de tráfego, incluindo:</p>
+
+        <ol>
+            <li><strong>Registro de novas leituras de tráfego:</strong> Permite inserir dados sobre local, horário, fluxo de veículos, velocidade média e ocorrências;</li>
+            <li><strong>Consulta de leituras por local:</strong> Busca e exibe todas as leituras registradas em um local específico;</li>
+            <li><strong>Consulta de leituras por horário:</strong> Permite filtrar leituras por faixa horária;</li>
+            <li><strong>Cálculo de média de fluxo de veículos:</strong> Realiza análise estatística do fluxo médio de veículos;</li>
+            <li><strong>Identificação da menor velocidade registrada:</strong> Identifica pontos com velocidade média mais baixa;</li>
+            <li><strong>Contagem de ocorrências registradas:</strong> Totaliza o número de incidentes reportados;</li>
+            <li><strong>Identificação de horário de pico:</strong> Determina automaticamente os horários com maior fluxo de veículos;</li>
+            <li><strong>Geração de relatórios detalhados por local:</strong> Cria relatórios completos com todas as informações relevantes.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>7. Como Executar o Projeto</h2>
+        <p>Para executar o projeto em seu ambiente local, siga os passos abaixo:</p>
+
+        <h3>7.1 Clonagem do Repositório</h3>
+        <div class="code-block">
+git clone https://github.com/joaomauricioporto/monitoramento-trafego-python.git
+cd monitoramento-trafego-python
+        </div>
+
+        <h3>7.2 Configuração do Ambiente Virtual (Opcional)</h3>
+        <div class="code-block">
+python -m venv venv
+source venv/bin/activate  # Para Linux/macOS
+# venv\Scripts\activate  # Para Windows
+        </div>
+
+        <h3>7.3 Instalação de Dependências</h3>
+        <div class="code-block">
+pip install customtkinter
+        </div>
+
+        <h3>7.4 Execução do Sistema</h3>
+        <p><strong>Com interface gráfica:</strong></p>
+        <div class="code-block">
+python gui.py
+        </div>
+
+        <p><strong>Via terminal:</strong></p>
+        <div class="code-block">
+python main.py
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>8. Possíveis Aplicações</h2>
+        <p>
+            Embora seja um projeto acadêmico e simplificado, sistemas desse tipo podem ser utilizados em cenários
+            reais para diversas finalidades:
+        </p>
+
+        <ul>
+            <li><strong>Monitoramento de mobilidade urbana:</strong> Acompanhamento contínuo do tráfego em diferentes pontos da cidade;</li>
+            <li><strong>Análise de padrões de tráfego:</strong> Identificação de tendências e comportamentos dos motoristas;</li>
+            <li><strong>Identificação de horários críticos:</strong> Determinação de períodos com maior congestionamento;</li>
+            <li><strong>Apoio ao planejamento urbano:</strong> Fornecimento de dados para decisões sobre infraestrutura;</li>
+            <li><strong>Avaliação de impacto:</strong> Análise do efeito de obras ou acidentes no fluxo de veículos.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>9. Melhorias Futuras</h2>
+        <p>Algumas melhorias que podem ser implementadas futuramente incluem:</p>
+
+        <ul>
+            <li>Persistência dos dados em banco de dados relacional ou arquivos JSON;</li>
+            <li>Geração de gráficos para visualização de dados utilizando bibliotecas como Matplotlib ou Plotly;</li>
+            <li>Exportação de relatórios em formato PDF;</li>
+            <li>Desenvolvimento de dashboard com visualização interativa de dados em tempo real;</li>
+            <li>Integração com APIs de mobilidade urbana e dados governamentais;</li>
+            <li>Implementação de algoritmos de machine learning para previsão de tráfego;</li>
+            <li>Adição de mapas interativos para visualização geográfica dos dados.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>10. Conclusão</h2>
+        <p>
+            O sistema de monitoramento de tráfego desenvolvido demonstra a aplicabilidade de conceitos de programação
+            em Python para resolver problemas reais relacionados à mobilidade urbana. A implementação bem-sucedida de
+            funcionalidades como registro de dados, análises estatísticas e geração de relatórios evidencia o potencial
+            da ferramenta para apoiar decisões relacionadas ao planejamento de trânsito.
+        </p>
+        <p>
+            A organização modular do código, separando responsabilidades entre interface, lógica de negócio e estruturas
+            de dados, facilita a manutenção e evolução do sistema. Além disso, a interface gráfica desenvolvida com
+            CustomTkinter proporciona uma experiência de usuário moderna e intuitiva.
+        </p>
+        <p>
+            Este projeto serve como base para desenvolvimentos futuros mais complexos, podendo ser expandido com novas
+            funcionalidades, integração com sistemas externos e análises mais sofisticadas. O conhecimento adquirido
+            durante o desenvolvimento pode ser aplicado em projetos similares que envolvam coleta, análise e visualização
+            de dados.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>11. Referências</h2>
+        <ul>
+            <li>Documentação oficial Python. Disponível em: <a href="https://docs.python.org/">https://docs.python.org/</a></li>
+            <li>CustomTkinter Documentation. Disponível em: <a href="https://github.com/TomSchimansky/CustomTkinter">https://github.com/TomSchimansky/CustomTkinter</a></li>
+            <li>Repositório do projeto. Disponível em: <a href="https://github.com/joaomauricioporto/monitoramento-trafego-python">https://github.com/joaomauricioporto/monitoramento-trafego-python</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
